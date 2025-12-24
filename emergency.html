@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Call - Aimee's Memory Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="img/hellokitty.png" alt="Hello Kitty" class="logo-icon">
+                    <span class="logo-text">Aimee's Collection</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="cats.html" class="nav-link">Cats</a></li>
+                    <li><a href="art.html" class="nav-link">Art</a></li>
+                    <li><a href="emergency.html" class="nav-link active">Emergency Call</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Emergency Contact 🆘</h1>
+                <p class="hero-subtitle">When you need to reach me immediately - here are all the ways to get in touch!</p>
+                <div class="hero-buttons">
+                    <a href="tel:+31615821023" class="btn btn-primary">📞 Call Now</a>
+                    <a href="mailto:darvankameran69616@gmail.com" class="btn btn-secondary">✉️ Send Email</a>
+                </div>
+            </div>
+            <div class="hero-images">
+                <img src="img/hellokitty3.png" alt="Hello Kitty" class="hero-cat">
+                <img src="img/hellokitty.png" alt="Hello Kitty" class="hero-theme">
+                <img src="img/hellokitty.png" alt="Hello Kitty" class="hero-cat">
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-icon">🆘</div>
+            <div class="floating-icon">📞</div>
+            <div class="floating-icon">💌</div>
+            <div class="floating-icon">🔒</div>
+            <div class="floating-icon">💖</div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact Section -->
+    <section class="cat-section">
+        <div class="container">
+            <h2 class="section-title">How to Reach Me 📱</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone Call</h3>
+                    <p>For immediate assistance or urgent matters</p>
+                    <a href="tel:+31615821023" class="contact-link">+31 6 15821023</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>For detailed messages and non-urgent communication</p>
+                    <a href="mailto:darvankameran69616@gmail.com" class="contact-link">darvankameran69616@gmail.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Text Message</h3>
+                    <p>Quick messages and casual conversations</p>
+                    <a href="sms:+31615821023" class="contact-link">Send SMS</a>
+                </div>
+                
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Lock Section -->
+    <section class="cat-section" style="background: linear-gradient(135deg, #f8f9ff 0%, #fff5f8 100%);">
+        <div class="container">
+            <h2 class="section-title">Secret Message 🔒</h2>
+            
+            <div class="lock-section">
+                <div class="lock-intro">
+                    <p>There's a special message waiting for you! But first, you need to unlock it with the secret password.</p>
+                    <div class="lock-button-container">
+                        <button class="lock-button" onclick="passwordProtection.showPasswordModal()">
+                            <i class="fas fa-lock"></i>
+                            Unlock Secret Message
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Password Modal -->
+                <div class="password-modal" id="passwordModal">
+                    <div class="password-form">
+                        <h3>🔐 Enter Secret Password</h3>
+                        <p style="color: #666; margin-bottom: 20px;">Only those who know the magic phrase can access this secret!</p>
+                        <form onsubmit="passwordProtection.handlePasswordSubmit(event)">
+                            <input type="password" class="password-input" placeholder="Enter password..." required>
+                            <button type="submit" class="submit-btn">Unlock</button>
+                        </form>
+                        <div class="hint" id="passwordHint">
+                            <!-- Hints will be shown here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Swipe Reveal Section -->
+                <div class="swipe-reveal-container" id="swipeReveal">
+                    <div class="swipe-card">
+                        <div class="swipe-content">
+                            <div class="secret-message">
+                                <div class="message-background">
+                                    <img src="img/hellokitty2.png" alt="Hello Kitty" class="hk-background">
+                                    <div class="message-text">
+                                        <h2>💖 I Love You 💖</h2>
+                                        <p>You found the secret message! This is just a little reminder that you're amazing and loved! ✨</p>
+                                        <div class="floating-hearts">
+                                            <span class="heart">💕</span>
+                                            <span class="heart">💖</span>
+                                            <span class="heart">💗</span>
+                                            <span class="heart">💝</span>
+                                            <span class="heart">💞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swipe-handle">
+                            <i class="fas fa-hand-paper"></i>
+                            <p>Swipe up to reveal the message</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Tips -->
+    <section class="cat-section">
+        <div class="container">
+            <h2 class="section-title">Emergency Tips 📋</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">⚡</div>
+                    <h3>Urgent Matters</h3>
+                    <p>For urgent situations, always call first. Phone calls are the fastest way to reach me immediately.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">📝</div>
+                    <h3>Detailed Messages</h3>
+                    <p>When you need to explain something complex, email is the best option with full details.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">💭</div>
+                    <h3>Quick Check-ins</h3>
+                    <p>Text messages are perfect for casual conversations and quick updates.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">🕐</div>
+                    <h3>Response Time</h3>
+                    <p>I try to respond as quickly as possible, but please be patient if I'm busy!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sweet Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cats.html">My Cats</a></li>
+                        <li><a href="art.html">Art Gallery</a></li>
+                        <li><a href="emergency.html">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Tips</h4>
+                    <ul>
+                        <li>📞 Call for urgent matters</li>
+                        <li>✉️ Email for detailed messages</li>
+                        <li>💬 Text for quick chats</li>
+                        <li>💖 Always include love!</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Cute & Sweet</h4>
+                    <p>Made with lots of love and Hello Kitty magic ✨</p>
+                    <img src="img/hellokitty2.png" alt="Hello Kitty" class="footer-hk">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aimee's Memory Collection. All rights reserved. 💖</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
