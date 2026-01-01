@@ -3,20 +3,14 @@
 // Password Protection System
 class PasswordProtection {
     constructor() {
-        this.password = "darkness is my ally";
+        this.password = "Aimee26052005";
         this.attempts = 0;
         this.maxAttempts = 3;
-        this.hints = [
-            "💡 Think about light and darkness...",
-            "💡 What is the opposite of light?",
-            "💡 This phrase describes a character's philosophy..."
-        ];
         this.init();
     }
 
     init() {
         this.bindEvents();
-        this.updateHint();
     }
 
     bindEvents() {
@@ -68,14 +62,13 @@ class PasswordProtection {
     handlePasswordSubmit(e) {
         e.preventDefault();
         const input = e.target.querySelector('.password-input');
-        const userPassword = input.value.toLowerCase().trim();
+        const userPassword = input.value.trim();
 
         if (userPassword === this.password) {
             this.showSuccess();
         } else {
             this.attempts++;
             this.showError();
-            this.updateHint();
             
             if (this.attempts >= this.maxAttempts) {
                 this.showMaxAttempts();
@@ -85,8 +78,20 @@ class PasswordProtection {
 
     showSuccess() {
         this.hidePasswordModal();
-        this.showMessage("🎉 Access Granted! Welcome to the secret area!", "success");
-        this.showSwipeReveal();
+        this.showMessage("🎉 Access Granted! Welcome!", "success");
+        
+        // Show the appropriate reveal section
+        const swipeReveal = document.querySelector('.swipe-reveal-container');
+        const personalInfo = document.querySelector('.personal-info-container');
+        
+        if (swipeReveal) {
+            swipeReveal.classList.add('show');
+            this.initSwipeFunctionality();
+        }
+        
+        if (personalInfo) {
+            personalInfo.classList.add('show');
+        }
     }
 
     showSwipeReveal() {
@@ -207,19 +212,7 @@ class PasswordProtection {
     }
 
     showError() {
-        const hint = document.querySelector('.hint');
-        if (hint) {
-            hint.classList.add('show');
-            hint.innerHTML = `❌ Wrong password! ${this.hints[this.attempts - 1]}`;
-        }
-    }
-
-    updateHint() {
-        const hint = document.querySelector('.hint');
-        if (hint && this.attempts > 0) {
-            hint.classList.add('show');
-            hint.innerHTML = `❌ Wrong password! ${this.hints[this.attempts - 1]}`;
-        }
+        this.showMessage("❌ Wrong password! Please try again.", "error");
     }
 
     showMaxAttempts() {
@@ -258,10 +251,6 @@ class PasswordProtection {
 
     reset() {
         this.attempts = 0;
-        const hint = document.querySelector('.hint');
-        if (hint) {
-            hint.classList.remove('show');
-        }
     }
 }
 
@@ -454,7 +443,7 @@ class FloatingHearts {
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all interactive features
-    new PasswordProtection();
+    window.passwordProtection = new PasswordProtection();
     new ImageGallery();
     new SmoothScroll();
     new FloatingHearts();

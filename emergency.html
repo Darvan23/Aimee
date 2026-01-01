@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+      <header class="header">
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
@@ -21,7 +21,8 @@
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="cats.html" class="nav-link">Cats</a></li>
                     <li><a href="art.html" class="nav-link">Art</a></li>
-                    <li><a href="emergency.html" class="nav-link active">Emergency Call</a></li>
+                    <li><a href="about.html" class="nav-link active">About Aimee</a></li>
+                    <li><a href="emergency.html" class="nav-link">Emergency Call</a></li>
                 </ul>
             </div>
         </nav>
@@ -90,11 +91,11 @@
         <div class="container">
             <h2 class="section-title">Secret Message 🔒</h2>
             
-            <div class="lock-section">
+<div class="lock-section">
                 <div class="lock-intro">
                     <p>There's a special message waiting for you! But first, you need to unlock it with the secret password.</p>
                     <div class="lock-button-container">
-                        <button class="lock-button" onclick="passwordProtection.showPasswordModal()">
+                        <button class="lock-button">
                             <i class="fas fa-lock"></i>
                             Unlock Secret Message
                         </button>
@@ -105,14 +106,12 @@
                 <div class="password-modal" id="passwordModal">
                     <div class="password-form">
                         <h3>🔐 Enter Secret Password</h3>
-                        <p style="color: #666; margin-bottom: 20px;">Only those who know the magic phrase can access this secret!</p>
-                        <form onsubmit="passwordProtection.handlePasswordSubmit(event)">
+                        <p style="color: #666; margin-bottom: 20px;"></p>
+                        <form>
                             <input type="password" class="password-input" placeholder="Enter password..." required>
                             <button type="submit" class="submit-btn">Unlock</button>
                         </form>
-                        <div class="hint" id="passwordHint">
-                            <!-- Hints will be shown here -->
-                        </div>
+                      
                     </div>
                 </div>
                 

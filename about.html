@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Aimee - Aimee's Memory Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="img/hellokitty.png" alt="Hello Kitty" class="logo-icon">
+                    <span class="logo-text">Aimee's Collection</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="cats.html" class="nav-link">Cats</a></li>
+                    <li><a href="art.html" class="nav-link">Art</a></li>
+                    <li><a href="about.html" class="nav-link active">About Aimee</a></li>
+                    <li><a href="emergency.html" class="nav-link">Emergency Call</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">All About Aimee 💕</h1>
+                <p class="hero-subtitle">Get to know the amazing person behind this beautiful memory collection!</p>
+                <div class="hero-buttons">
+                    <a href="#games" class="btn btn-primary">🎮 Her Favorite Games</a>
+                    <a href="#personal" class="btn btn-secondary">🔒 Personal Info</a>
+                </div>
+            </div>
+            <div class="hero-images">
+                <img src="img/hellokitty2.png" alt="Hello Kitty" class="hero-cat">
+                <img src="img/hellokitty3.png" alt="Hello Kitty" class="hero-cat">
+                <img src="img/hellokitty.png" alt="Hello Kitty" class="hero-theme">
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-icon">💕</div>
+            <div class="floating-icon">🌟</div>
+            <div class="floating-icon">🎮</div>
+            <div class="floating-icon">💖</div>
+            <div class="floating-icon">✨</div>
+        </div>
+    </section>
+
+    <!-- Favorite Games Section (Public) -->
+    <section id="games" class="cat-section">
+        <div class="container">
+            <h2 class="section-title">🎮 Aimee's Top 10 Favorite Games</h2>
+            
+            <div class="games-intro">
+                <div class="intro-card">
+                    <div class="intro-content">
+                        <div class="intro-text">
+                            <h3>🎮 Gaming Passion</h3>
+                            <p>Aimee loves gaming! These are her all-time favorite games that she enjoys playing. From cozy animal crossing adventures to thrilling life is strange mysteries, she has amazing taste in games!</p>
+                            <div class="cat-stats">
+                                <span class="stat">🎮 Genre: Adventure & Simulation</span>
+                                <span class="stat">💕 Platform: Nintendo & More</span>
+                                <span class="stat">🌟 Favorite: Animal Crossing Series</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-rank">1</div>
+                    <div class="game-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/4c/Animal_Crossing_Wild_World.jpg" alt="Animal Crossing: Wild World" class="game-image" onerror="this.style.display='none';this.parentElement.classList.add('game-animal-crossing');this.parentElement.innerHTML='<span class=game-icon>🐱</span>'">
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Animal Crossing: Wild World</h3>
+                        <p>The beginning of her Animal Crossing journey! A cozy DS adventure that started it all.</p>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-rank">2</div>
+                    <div class="game-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Animal_Crossing_New_Horizons.jpg" alt="Animal Crossing: New Horizons" class="game-image" onerror="this.style.display='none';this.parentElement.classList.add('game-animal-crossing');this.parentElement.innerHTML='<span class=game-icon>🏝️</span>'">
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Animal Crossing: New Horizons</h3>
+                        <p>Her desert island paradise! Building her dream island with Milo and Stanley by her side.</p>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-rank">3</div>
+                    <div class="game-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Animal_Crossing_New_Leaf.jpg" alt="Animal Crossing: New Leaf" class="game-image" onerror="this.style.display='none';this.parentElement.classList.add('game-animal-crossing');this.parentElement.innerHTML='<span class=game-icon>🏘️</span>'">
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Animal Crossing: New Leaf</h3>
+                        <p>Being the mayor and designing her town to perfection. Classic village life!</p>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-rank">4</div>
+                    <div class="game-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Life_is_Strange.jpg" alt="Life is Strange" class="game-image" onerror="this.style.display='none';this.parentElement.classList.add('game-life-strange');this.parentElement.innerHTML='<span class=game-icon>🔮</span>'">
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Life is Strange</h3>
+                        <p>Emotional story about friendship and making tough choices. Absolutely unforgettable!</p>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-rank">5</div>
+                    <div class="game-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/9/9c/Life_is_Strange_True_Colors_cover.jpg" alt="Life is Strange: True Colors" class="game-image" onerror="this.style.display='none';this.parentElement.classList.add('game-life-strange');this.parentElement.innerHTML='<span class=game-icon>🌈</span>'">
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Life is Strange: True Colors</h3>
+                        <p>The most beautiful Life is Strange yet! Alex's emotional journey to find the truth.</p>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-rank">6</div>
+                    <div class="game-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/7/72/Monster_High_New_Ghoul_in_School.jpg" alt="Monster High: New Ghoul in School" class="game-image" onerror="this.style.display='none';this.parentElement.classList.add('game-monster-high');this.parentElement.innerHTML='<span class=game-icon>🧛</span>'">
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Monster High: New Ghoul in School</h3>
+                        <p>Being a ghoul in school is so cool! Her favorite spooky school adventure.</p>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-rank">7</div>
+                    <div class="game-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/The_Walking_Dead_Season_1_Cover.jpg" alt="The Walking Dead" class="game-image" onerror="this.style.display='none';this.parentElement.classList.add('game-walking-dead');this.parentElement.innerHTML='<span class=game-icon>🧟</span>'">
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">The Walking Dead (Telltale)</h3>
+                        <p>Surviving the zombie apocalypse with Lee and Clementine. Heartbreaking and amazing!</p>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-rank">8</div>
+                    <div class="game-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Assassins_Creed_2_cover.png" alt="Assassin's Creed 2" class="game-image" onerror="this.style.display='none';this.parentElement.classList.add('game-assassins-creed');this.parentElement.innerHTML='<span class=game-icon>🗡️</span>'">
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Assassin's Creed 2</h3>
+                        <p>Becoming an assassin with Ezio Auditore. Renaissance adventure at its best!</p>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-rank">9</div>
+                    <div class="game-image-container game-dogz">
+                        <span class="game-icon">🐕</span>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Dogz (DS)</h3>
+                        <p>Cute puppy simulation on the go! Taking care of adorable virtual pets.</p>
+                    </div>
+                </div>
+                
+                <div class="game-card">
+                    <div class="game-rank">10</div>
+                    <div class="game-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/The_Sims_3_cover.jpg" alt="Sims 3" class="game-image" onerror="this.style.display='none';this.parentElement.classList.add('game-sims');this.parentElement.innerHTML='<span class=game-icon>🏠</span>'">
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Sims 3</h3>
+                        <p>Creating lives and stories in The Sims 3. Endless creativity and fun!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Info Section (Password Protected) -->
+    <section id="personal" class="cat-section" style="background: linear-gradient(135deg, #f8f9ff 0%, #fff5f8 100%);">
+        <div class="container">
+            <h2 class="section-title">🔒 All About Aimee (Private)</h2>
+            
+            <div class="lock-section">
+                <div class="lock-intro">
+                    <p>🔐 This section contains Aimee's personal information. Enter the password to unlock and learn more about her!</p>
+<div class="lock-button-container">
+                        <button class="lock-button">
+                            <i class="fas fa-lock"></i>
+                            Unlock Personal Info
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Password Modal -->
+                <div class="password-modal" id="passwordModal">
+                    <div class="password-form">
+                        <h3>🔐 Enter Password</h3>
+                        <p style="color: #666; margin-bottom: 20px;">Enter The password</p>
+                        <form>
+                            <input type="password" class="password-input" placeholder="Enter password..." required>
+                            <button type="submit" class="submit-btn">Unlock</button>
+                        </form>
+        
+                    </div>
+                </div>
+                
+                <!-- Personal Info Reveal -->
+                <div class="personal-info-container" id="personalInfo">
+                    <div class="personal-card">
+                        <div class="personal-header">
+                            <img src="img/Aimee.jpeg" alt="Aimee" class="personal-aimee">
+                            <img src="img/hellokitty2.png" alt="Hello Kitty" class="personal-icon">
+                            <h3>💖 All About Aimee 💖</h3>
+                        </div>
+                        
+                        <div class="personal-details">
+                            <div class="personal-section">
+                                <h4>👤 Basic Information</h4>
+                                <div class="detail-grid">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Name:</span>
+                                        <span class="detail-value">Aimee Mycock</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Birthday:</span>
+                                        <span class="detail-value">26-05-2005</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Location:</span>
+                                        <span class="detail-value">Stokecity</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="personal-section">
+                                <h4>💕 Personality & Interests</h4>
+                                <div class="interests-grid">
+                                    <span class="interest-tag">🎮 Gamer</span>
+                                    <span class="interest-tag">🎨 Artist</span>
+                                    <span class="interest-tag">📚 Book Reader</span>
+                                    <span class="interest-tag">🐱 Cat Lover</span>
+                                    <span class="interest-tag">🏠 Introvert</span>
+                                </div>
+                            </div>
+                            
+                            <div class="personal-section">
+                                <h4>🍽️ Her Favorite Meal</h4>
+                                <div class="onion-cards">
+                                    <div class="onion-card">
+                                        <img src="img/onion.jpg" alt="Onion Dish" class="onion-image">
+                                        <p class="onion-caption">🥣 Onion 1</p>
+                                    </div>
+                                    <div class="onion-card">
+                                        <img src="img/onion2.jpg" alt="Onion Dish" class="onion-image">
+                                        <p class="onion-caption">🍲 Onions 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="personal-section">
+                                <h4>💭 About Her</h4>
+                                <p class="about-text">
+                                    Aimee is an amazing, talented person who loves gaming and creating beautiful art. 
+                                    She's a book lover who enjoys getting lost in good stories. As a dedicated cat lover, 
+                                    she adores her Milo and Stanley more than anything! Being an introvert, she prefers 
+                                    cozy days at home rather than going out. She values quality time with her loved ones 
+                                    and her cats, making every moment special. Her creativity knows no bounds, whether 
+                                    she's drawing, gaming, or just being her wonderful self!
+                                </p>
+                            </div>
+                            
+                            <div class="personal-section">
+                                <h4>🌟 What Makes Her Special</h4>
+                                <ul class="special-list">
+                                    <li>💖 Kind heart and caring nature</li>
+                                    <li>🎨 Incredible artistic talent</li>
+                                    <li>🎮 Amazing gaming skills</li>
+                                    <li>🐱 Loves cats more than anything</li>
+                                    <li>📚 Smart and creative</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sweet Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cats.html">My Cats</a></li>
+                        <li><a href="art.html">Art Gallery</a></li>
+                        <li><a href="about.html">About Aimee</a></li>
+                        <li><a href="emergency.html">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Made with Love</h4>
+                    <p>This website is a labor of love 💕</p>
+                    <img src="img/hellokitty2.png" alt="Hello Kitty" class="footer-hk">
+                </div>
+                <div class="footer-section">
+                    <h4>Cute & Sweet</h4>
+                    <p>Made with lots of love and Hello Kitty magic ✨</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aimee's Memory Collection. All rights reserved. 💖</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
