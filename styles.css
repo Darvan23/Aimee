@@ -8,6 +8,8 @@
 :root {
     --hot-pink: #ff1493;
     --pink-light: #ff69b4;
+    --bubblegum: #ffb6de;
+    --baby-pink: #ffe3f4;
     --black: #07070a;
     --black-soft: #15151c;
     --text: #202024;
@@ -31,6 +33,25 @@ body {
     overflow-x: hidden;
 }
 
+body::before {
+    content: "♡  ♥  ♡  ✦  ♡  ♥  ♡  ✦  ♡  ♥  ♡  ✦";
+    position: fixed;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    padding: 7px 0;
+    color: rgba(255, 255, 255, 0.88);
+    background: linear-gradient(90deg, var(--hot-pink), var(--black), var(--hot-pink));
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 14px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 999;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -44,6 +65,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 3px solid var(--bubblegum);
 }
 
 .navbar {
@@ -70,6 +92,8 @@ body {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 0 0 3px var(--hot-pink), 0 0 18px rgba(255, 20, 147, 0.7);
 }
 
 .logo-text {
@@ -93,6 +117,13 @@ body {
     border-radius: 25px;
     transition: all 0.3s ease;
     position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.nav-link::before {
+    content: "♡";
+    margin-right: 6px;
+    color: var(--bubblegum);
 }
 
 .nav-link:hover,
@@ -111,6 +142,34 @@ body {
         linear-gradient(135deg, rgba(7, 7, 10, 0.96), rgba(31, 0, 20, 0.9));
 }
 
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 0;
+    filter: drop-shadow(0 12px 18px rgba(0,0,0,0.35));
+}
+
+.hero::before {
+    top: 32px;
+    right: 5vw;
+    background-image: url("img/hellokitty2.png");
+    transform: rotate(10deg);
+}
+
+.hero::after {
+    bottom: 24px;
+    left: 5vw;
+    background-image: url("img/bratzdolls_new.png");
+    transform: rotate(-7deg);
+}
+
 .hero-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -119,6 +178,8 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-title {
@@ -128,6 +189,12 @@ body {
     margin-bottom: 20px;
     text-shadow: 3px 3px 0 var(--hot-pink), 0 8px 24px rgba(0,0,0,0.35);
     line-height: 1.2;
+}
+
+.hero-title::after {
+    content: "  ♡";
+    color: var(--bubblegum);
+    text-shadow: 2px 2px 0 var(--black);
 }
 
 .hero-subtitle {
@@ -197,6 +264,7 @@ body {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .hero-cat {
@@ -207,6 +275,7 @@ body {
     box-shadow: 0 12px 30px rgba(0,0,0,0.38);
     border: 3px solid rgba(255, 20, 147, 0.7);
     transition: transform 0.3s ease;
+    background: white;
 }
 
 .hero-cat:hover {
@@ -220,6 +289,8 @@ body {
     object-fit: cover;
     box-shadow: 0 12px 30px rgba(0,0,0,0.38);
     border: 3px solid rgba(255, 255, 255, 0.72);
+    background: var(--baby-pink);
+    padding: 6px;
 }
 
 /* Floating Elements */
@@ -237,6 +308,7 @@ body {
     font-size: 2rem;
     animation: float 6s ease-in-out infinite;
     opacity: 0.7;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.28);
 }
 
 .floating-icon:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
@@ -264,6 +336,13 @@ body {
     text-shadow: 1px 1px 0 var(--black);
 }
 
+.section-title::before,
+.section-title::after {
+    content: " ♥ ";
+    color: var(--hot-pink);
+    text-shadow: 1px 1px 0 var(--black);
+}
+
 .preview-card {
     background: linear-gradient(135deg, var(--surface), var(--surface-pink));
     border: 2px solid var(--line);
@@ -272,6 +351,8 @@ body {
     margin-bottom: 40px;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .preview-card:hover {
@@ -1853,11 +1934,50 @@ body {
 /* Hot pink and black theme polish */
 .cat-section {
     background: var(--surface) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.cat-section::before,
+.cat-section::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.16;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cat-section::before {
+    top: 24px;
+    left: 20px;
+    background-image: url("img/hellokitty.png");
+    transform: rotate(-10deg);
+}
+
+.cat-section::after {
+    right: 20px;
+    bottom: 24px;
+    background-image: url("img/bratzdolls.png");
+    transform: rotate(8deg);
+}
+
+.cat-section > .container,
+.preview-section > .container {
+    position: relative;
+    z-index: 1;
 }
 
 .cat-section:nth-of-type(even),
 .preview-section {
-    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-pink) 100%) !important;
+    background:
+        radial-gradient(circle at 16px 16px, rgba(255, 20, 147, 0.12) 0 4px, transparent 5px),
+        linear-gradient(180deg, var(--surface) 0%, var(--surface-pink) 100%) !important;
+    background-size: 36px 36px, auto;
 }
 
 .intro-card,
@@ -1866,6 +1986,21 @@ body {
     border: 2px solid var(--line);
     border-radius: 20px;
     box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-card::before,
+.personal-card::before,
+.preview-card::before {
+    content: "♡";
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    color: var(--hot-pink);
+    font-size: 2.4rem;
+    font-weight: 700;
+    opacity: 0.34;
 }
 
 .cat-card,
@@ -1882,6 +2017,7 @@ body {
 .password-form {
     border: 2px solid var(--line);
     box-shadow: var(--shadow);
+    position: relative;
 }
 
 .cat-card,
@@ -1897,6 +2033,45 @@ body {
 .onion-card,
 .password-form {
     background: var(--surface);
+}
+
+.cat-card::before,
+.art-card::before,
+.process-card::before,
+.contact-card::before,
+.tip-card::before,
+.game-card::before {
+    content: "♡";
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: white;
+    background: linear-gradient(45deg, var(--hot-pink), var(--black));
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 6px 16px rgba(255, 20, 147, 0.35);
+    z-index: 2;
+}
+
+.process-card,
+.contact-card,
+.tip-card,
+.game-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.cat-image,
+.art-image,
+.preview-img,
+.intro-image,
+.onion-image,
+.game-image {
+    border: 3px solid var(--baby-pink);
 }
 
 .intro-text h3,
@@ -1947,6 +2122,50 @@ body {
     background: linear-gradient(45deg, var(--black), var(--hot-pink));
 }
 
+.btn,
+.lock-button,
+.submit-btn,
+.contact-link,
+.interest-tag,
+.stat {
+    box-shadow: 0 8px 18px rgba(255, 20, 147, 0.18);
+}
+
+.btn::after,
+.lock-button::after,
+.submit-btn::after {
+    content: " ♥";
+    color: var(--baby-pink);
+}
+
+.footer-section h4::after {
+    content: " ♡";
+}
+
+.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: "♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡";
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.28);
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 18px;
+    pointer-events: none;
+}
+
+.footer-content,
+.footer-bottom {
+    position: relative;
+    z-index: 1;
+}
+
 .lock-button:hover,
 .submit-btn:hover {
     box-shadow: 0 8px 25px rgba(255, 20, 147, 0.42);
@@ -1957,6 +2176,18 @@ body {
 }
 
 @media (max-width: 768px) {
+    body::before {
+        top: 0;
+        position: absolute;
+        font-size: 0.85rem;
+        letter-spacing: 8px;
+        padding: 5px 0;
+    }
+
+    .header {
+        padding-top: 22px;
+    }
+
     .container,
     .nav-container,
     .hero-content {
@@ -2006,6 +2237,23 @@ body {
         padding: 34px 0 42px;
     }
 
+    .hero::before,
+    .hero::after {
+        width: 74px;
+        height: 74px;
+        opacity: 0.72;
+    }
+
+    .hero::before {
+        top: 12px;
+        right: 10px;
+    }
+
+    .hero::after {
+        bottom: 10px;
+        left: 10px;
+    }
+
     .hero-title {
         font-size: clamp(2rem, 11vw, 2.75rem);
         line-height: 1.05;
@@ -2040,10 +2288,11 @@ body {
 
     .hero-images {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         width: 100%;
         max-width: 340px;
         margin: 0 auto;
+        gap: 8px;
     }
 
     .hero-cat,
@@ -2058,6 +2307,12 @@ body {
         font-size: clamp(1.7rem, 8vw, 2.2rem);
         line-height: 1.15;
         margin-bottom: 28px;
+    }
+
+    .section-title::before,
+    .section-title::after {
+        content: "♥";
+        padding: 0 4px;
     }
 
     .preview-card,
@@ -2108,6 +2363,34 @@ body {
     .tip-card,
     .game-card {
         border-radius: 16px;
+    }
+
+    .cat-card::before,
+    .art-card::before,
+    .process-card::before,
+    .contact-card::before,
+    .tip-card::before,
+    .game-card::before {
+        width: 30px;
+        height: 30px;
+        font-size: 0.95rem;
+    }
+
+    .cat-section::before,
+    .cat-section::after {
+        width: 62px;
+        height: 62px;
+        opacity: 0.1;
+    }
+
+    .cat-section::before {
+        left: 6px;
+        top: 10px;
+    }
+
+    .cat-section::after {
+        right: 6px;
+        bottom: 10px;
     }
 
     .cat-image,
